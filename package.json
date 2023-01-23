@@ -1,0 +1,82 @@
+{
+  "name": "res-cordova",
+  "version": "0.15.4-0",
+  "description": "This tool will crop and resize PNG source images into appropriate sizes for modern iOS and Android devices.",
+  "homepage": "https://navifyframework.web.app",
+  "author": "Navify Team",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=10.3.0"
+  },
+  "bin": {
+    "res-cordova": "./bin/res-cordova"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "npm run eslint && npm run prettier -- --check",
+    "fmt": "npm run eslint -- --fix && npm run prettier -- --write",
+    "eslint": "eslint . --ext ts",
+    "prettier": "prettier src/**/*.ts",
+    "release": "np --no-tests",
+    "prepublishOnly": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier -- --check"
+    }
+  },
+  "prettier": "@navify/prettier-config",
+  "eslintConfig": {
+    "extends": "@navify/eslint-config/recommended"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navify/res-cordova.git"
+  },
+  "bugs": {
+    "url": "https://github.com/navify/res-cordova/issues"
+  },
+  "keywords": [
+    "navify",
+    "cordova",
+    "phonegap",
+    "resources",
+    "mobile",
+    "native",
+    "icon",
+    "splash screen"
+  ],
+  "dependencies": {
+    "@navify/utils-array": "^2.1.11",
+    "@navify/utils-fs": "^3.1.12",
+    "debug": "^4.2.0",
+    "elementtree": "^0.1.7",
+    "sharp": "^0.29.2",
+    "tslib": "^2.0.3"
+  },
+  "devDependencies": {
+    "@navify/eslint-config": "^0.3.0",
+    "@navify/prettier-config": "^1.0.1",
+    "@types/debug": "^4.1.5",
+    "@types/elementtree": "^0.1.0",
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/node": "~10.17.13",
+    "@types/sharp": "^0.27.1",
+    "eslint": "^7.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.3.0",
+    "jest": "~25.5.0",
+    "np": "^7.0.0",
+    "prettier": "^2.1.2",
+    "ts-jest": "~25.5.0",
+    "typescript": "~4.6.4"
+  }
+}
