@@ -1,6 +1,6 @@
 {
   "name": "res-cordova",
-  "version": "0.15.4-0",
+  "version": "0.15.4",
   "description": "This tool will crop and resize PNG source images into appropriate sizes for modern iOS and Android devices.",
   "homepage": "https://navifyframework.web.app",
   "author": "Navify Team",
